@@ -1,6 +1,17 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Mi blog personal</title>
+</head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <h1>Mi blog personal</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo"><br><br>
+        <label for="texto">Texto:</label><br>
+        <textarea id="texto" name="texto"></textarea><br><br>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
