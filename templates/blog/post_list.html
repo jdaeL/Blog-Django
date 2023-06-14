@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Mi blog personal</title>
 </head>
 <body>
     <h1>Mi blog personal</h1>
     <form method="POST">
-        {% csrf_token %}
         <label for="titulo">Título:</label><br>
         <input type="text" id="titulo" name="titulo"><br><br>
         <label for="texto">Texto:</label><br>
