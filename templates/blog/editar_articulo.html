@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Editar Artículo</title>
-</head>
-<body>
-    <h1>Editar Artículo</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="titulo">Título:</label><br>
-        <input type="text" id="titulo" name="titulo" value="{{ articulo.title }}"><br><br>
-        <label for="texto">Texto:</label><br>
-        <textarea id="texto" name="texto">{{ articulo.text }}</textarea><br><br>
-        <input type="submit" value="Actualizar">
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
     </form>
-</body>
-</html>
+{% endblock %}
