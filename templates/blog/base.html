@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Mi blog personal</title>
+    </head>
+
+    <body>
+        <div>
+        {% if user.is_authenticated %}
+            <a href="{% url 'crear_articulo' %}">
+            <span class="glyphicon glyphicon-plus"> </span> </a>
+        {% endif %}
+
+            <h1><a href="/">Blog Personal</a></h1>
+        
+        </div>
+        <div>
+            <div>
+                <div>
+                {% block content %}
+
+
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
